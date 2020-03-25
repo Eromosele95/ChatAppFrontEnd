@@ -1,0 +1,17 @@
+<div class="text-center font-mono bg-gray-200 h-screen w-screen ">
+    <h1 class="pb-10 font-semibold text-4xl">Welcome To ChatBox !</h1>
+    <h3 class="">Please Enter a Username to Continue</h3>
+    <form [formGroup]="signup" (ngSubmit)="onSubmit()" >
+        <input
+        formControlName="username"
+        class="bg-transparent rounded-sm shadow-outline "
+        type="text">
+        <button class="border-2 p-1 ml-5 rounded-md transition duration-500 ease-in-out bg-red-600 hover:bg-green-700 transform hover:-translate-y-0.5 hover:scale-110 " type="submit">Submit</button>
+        <!-- <button (click)="sendMessage()">Send</button> -->
+    </form>
+    <span
+    *ngIf="!signup.valid"
+    class="text-red-700 font-extrabold flex-row"
+    >You could literally enter any username -_-
+    </span>
+    </div> 
